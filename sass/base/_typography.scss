@@ -1,0 +1,51 @@
+/* This file is used to define typography-related styles */
+
+body {
+    font-family: $font-stack;
+    color : $black;
+}
+
+%font-base {
+    font-family: $font-stack;
+    font-size: $fs-base;
+    line-height: $lh-base;
+}
+
+%fsb-mobile {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+%font-home-title {
+    font-family: $font-stack;
+    font-size: $fs-home-title;
+    line-height: $lh-home-title;  
+}
+
+%fht-mobile {
+    font-size: 48px;
+    line-height: 72px;
+}
+
+%font-subtitle {
+    font-family: $font-stack;
+    font-size: $fs-subtitle;
+    line-height: $lh-subtitle;  
+}
+
+%fs-mobile {
+    font-size: 36px;
+    line-height: 54px;
+}
+
+%font-footer {
+    font-family: $font-stack;
+    font-size: $fs-footer;
+    line-height: $lh-footer;  
+}
+
+%ff-mobile {
+    font-size: 27px;
+    line-height: 40.5px;
+}
+
