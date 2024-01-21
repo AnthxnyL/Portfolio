@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', (event)=> {
 
     const svg = document.querySelector('svg.trail');
     const path = svg.querySelector('path');
-    const section = document.querySelector('.home');
+    const section = document.querySelector('.header-home-container');
 
     let points = [];
     let segments = 40;
@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', (event)=> {
                 points.push({x: x, y: y});
             }
         }
-        
     }
 
     const anim = ()=> {

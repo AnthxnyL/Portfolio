@@ -49,3 +49,10 @@ body {
     line-height: 40.5px;
 }
 
+%font-bold {
+    font-weight:500;
+    font-size: 26px;
+    font-family: $font-stack;
+    line-height: calc(24px * 1.3);
+}
+

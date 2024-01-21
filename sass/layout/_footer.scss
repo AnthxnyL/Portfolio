@@ -1,0 +1,72 @@
+.footer {
+    padding: 145px 100px 28px 100px;
+    background-color: $white;
+    @include size (100%, 530px);
+    @include flex (center, center);
+
+    &__flex {
+        @include flex (center, flex-start, column);
+        gap : 32px;
+        @include size (100%, 100%);
+
+        &__links {
+            @include flex(center, flex-start, column);
+            gap : 32px;
+
+            li {
+                @extend %font-footer;
+                @include flex (center, center);
+
+                a {
+                    @include flex (center, flex-start);
+                    gap : 24px;
+
+                    .footer-arrow {
+                       display: none;
+                        @include size (40px, 40px);
+    
+                        svg {           
+                            @include size (100%, 100%);
+                        }
+                    }
+
+                    &:hover {
+                        .footer-arrow {
+                            animation : appear 0.5s ease-in-out;
+                            display: block;
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        hr {
+            width: 100%;
+            border: 1px solid $black;
+        }
+
+        &__copyright {
+            align-self: flex-end;
+           font-size: 16px;
+           font-weight: 400;
+        }
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width : 800px){
+    .footer {
+        padding : 145px 20px 28px 20px;
+    }
+}
