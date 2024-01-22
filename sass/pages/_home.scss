@@ -397,16 +397,64 @@ html {
         @include grid (1fr 1fr, repeat(4, auto), 130px);
         @include position (center, center);
 
+        .ongoing {
+            color : grey;
+
+            a {
+                color : grey;
+
+                svg {
+                    fill : grey;
+                }
+            }
+        }
+
 
         &__project {
             @include size (100%, auto);
             gap : 16px;
 
             &__image {
-                background-color: green;
+                position: relative;
+                background-color: grey;
                 border-radius: 30px;
-                object-fit: cover;
                 @include flex (center, center);
+
+                video {
+                    z-index: 0;
+                    object-fit: cover;
+                    @include size (100%, 100%);
+                    border-radius: 30px;
+                    cursor: pointer;
+                    // filter : grayscale(100%);
+                    // -webkit-filter: grayscale(100%);
+
+                    // &:hover {
+                    //     transition : 0.5s;
+                    //     filter : grayscale(0%);
+                    //     -webkit-filter: grayscale(0%);
+                    // }
+                }
+
+                .link-website-button {
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 20px;
+                    right: 20px;
+                    padding: 20px;
+                    border-radius: 50%;
+                    background-color: $white;
+                    @include size (70px, 70px);
+
+                    svg {
+                        fill : $black;
+                        @include size (100%, 100%);
+                    }
+
+                    &:hover svg {
+                       fill : green;
+                    }
+                }
 
             }
 
@@ -422,6 +470,17 @@ html {
 
                 p {
                     @extend %font-base;
+                }
+
+                a {
+                    width: 100%;
+                    @extend %font-base;
+                    color : $primary;
+
+                    svg {
+                        margin-left: 8px;
+                        @include size (14px, 14px);
+                    }
                 }
                 
                 &__capsules {
