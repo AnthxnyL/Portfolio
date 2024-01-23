@@ -50,6 +50,11 @@
                 li {
                     @extend %font-base;
                     color : $black;
+
+                    &:hover {
+                        transition: 1s;
+                        color : $primary-hover;
+                    }
                 }
             }
         }

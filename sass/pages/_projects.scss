@@ -124,7 +124,7 @@
                 }
                 
                 p {
-                    max-width: 450px;
+                    max-width: 650px;
                     @extend %font-base;
                 }
             }
@@ -297,10 +297,16 @@
 
     .return-home {
         margin-top: 32px;
-        @include flex (flex-start, center);
+        @include size (100%, auto);
+        @include flex (space-between, center);
 
         a {
             @extend %font-base;
+
+            &:hover {
+                color: $primary-hover;
+                transition: 1s;
+            }
         }
     }
 }

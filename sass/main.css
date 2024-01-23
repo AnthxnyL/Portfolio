@@ -170,6 +170,10 @@ body {
 .top-header__flex__nav__links li {
   color: #080808;
 }
+.top-header__flex__nav__links li:hover {
+  transition: 1s;
+  color: #3A7CB1;
+}
 .top-header__flex .hamburger {
   display: none;
   cursor: pointer;
@@ -1196,7 +1200,7 @@ html {
   height: 1px;
 }
 .description-project__flex__content__desc p {
-  max-width: 450px;
+  max-width: 650px;
 }
 .description-project__flex__content__tools {
   display: flex;
@@ -1345,11 +1349,18 @@ html {
 }
 .mockup-project .return-home {
   margin-top: 32px;
+  width: 100%;
+  height: auto;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
+.mockup-project .return-home a:hover {
+  color: #3A7CB1;
+  transition: 1s;
+}
+
 @media screen and (max-width: 1024px) {
   .mockup-project {
     padding: 150px 20px;
