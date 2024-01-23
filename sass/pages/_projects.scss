@@ -1,0 +1,345 @@
+
+.image-oakland {
+    background: center / cover no-repeat url('../img/mockup-oakland/eolienne.jpeg');
+  
+}
+
+.image-clem {
+    background: center / cover no-repeat url('../img/mockup-clem/jeunes.jpg');
+  
+}
+
+.image-project {
+    z-index : 0;
+    position: fixed;
+    top : 0;
+    @include size (100%, 80vh);
+    @include flex(center, center, column);
+
+    &__flex {
+        @include flex (center, center);
+        @include size (100%, 100%);
+
+        &__content {
+            backdrop-filter: blur(10px);
+            padding: 32px;
+            @include flex (center, center, column);
+            gap : 32px;
+
+            &__logo {
+                @include size (500px, auto);
+                @include flex(center, center);
+
+                img {
+                    @include size (100%, auto);
+                   object-fit: contain;
+                }
+            }
+
+            &__capsules {
+                @include flex (center, center);
+                gap : 16px;
+
+                .capsule-theme {
+                    padding : 16px;
+                    border-radius : 30px;
+                    border : 2px solid $white;
+                    @extend %font-base;
+                    font-weight: 500;
+                    color : $white;
+                }
+            }
+        }
+       
+    }
+}
+
+
+@media screen and (max-width : 768px){
+
+    .image-project {
+        &__flex {
+            &__content {
+                &__logo {
+                    @include size (300px, auto);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 450px){
+    .image-project {
+        &__flex {
+            &__content {
+
+                &__logo {
+                    @include size (200px, auto);
+                }
+                &__capsules {     
+                    .capsule-theme{
+                        padding: 8px;
+                        font-size: 12px;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+.description-project {
+    border-radius: 30px 30px 0 0;
+    margin-top: 80vh;
+    position: relative;
+    z-index : 10;
+    @include size (100%, auto);
+    background-color: $white;
+    @include flex (center, center, column);
+    padding: 70px 100px;
+
+    &__flex {
+       @include flex (space-between, center);
+
+    
+        &__content {
+            @include flex (center, flex-start, column);
+            gap : 64px;
+
+            &__desc {
+                @include flex (center, flex-start, column);
+                gap : 18px;
+
+                h3 {
+                    @extend %font-bold;
+                    font-weight: 400;
+                }
+
+                hr {
+                    background-color: $black;
+                    border: none;
+                    @include size (100%, 1px);
+                }
+                
+                p {
+                    max-width: 450px;
+                    @extend %font-base;
+                }
+            }
+
+            &__tools {
+                @include flex (center, flex-start, column);
+                gap : 18px;
+
+                h3 {
+                    @extend %font-bold;
+                    font-weight: 400;
+                }
+                hr {
+                    background-color: $black;
+                    border: none;
+                    @include size (100%, 1px);
+                }
+
+                .tools__logo {
+                    @include flex (center, center);
+                    gap : 8px;
+
+                    img {
+                        @include size (auto, 64px);
+                    }
+                }
+            }  
+
+            a {
+                @include flex (center, center);
+                gap : 24px;
+                @extend %font-bold;
+                font-weight: 400;
+                color : $primary;
+
+               svg {
+                     @include size (auto, 24px);
+                     fill : $primary;
+               }
+
+              &:hover {
+                color: $primary-hover;
+                transition: 1s;
+
+                svg {
+                    transition: 1s ease-in-out;
+                    fill: $primary-hover;
+                }
+              }
+            }
+        }
+
+        &__arrow {
+            align-self: flex-end;
+            @include flex (center, center);
+            @include size (150px, auto);
+
+            svg {
+                @include size (100%, auto);
+                fill: rgb(169, 169, 169);
+                transform : rotate(180deg);
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 1024px){
+    .description-project {
+        padding: 70px 20px;
+    }
+}
+
+@media screen and (max-width : 600px){
+    .description-project {
+        &__flex {
+            &__content {
+                &__desc {
+                    h3 {
+                        font-size: 24px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+                &__tools {
+                    h3 {
+                        font-size: 24px;
+                    }
+                    .tools__logo {
+                        img {
+                            @include size (auto, 48px);
+                        }
+                    }
+                }
+            }
+
+            &__arrow {
+                @include size (100px, auto);
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 400px){
+    .description-project {
+        &__flex {
+            &__arrow {
+                display: none;
+            }
+        }
+    }
+}
+
+
+// Mockups
+
+.mockup-project {
+    padding: 150px 100px;
+    position: relative;
+    z-index : 10;
+    @include size (100%, auto);
+    @include flex (center, center, column);
+    background-color: $white;
+    
+    &__grid {
+        @include grid( 1fr 1fr , 1fr 1fr, 30px);
+        @include position (center, center);
+
+        .mockup-case {
+            border-radius: 30px;
+            @include size (100%, 650px);
+
+            img {
+                @include size (100%, 100%);
+                border-radius: 30px;
+            }
+        }
+
+        .coucou-clem__background {
+            background-color: #EF8426;
+        }
+
+        &__website {
+            grid-column: 1/3;
+
+            img {
+                object-fit: cover;
+            }
+
+        }
+
+        &__screens {
+            background-color: #212529;
+
+            img {
+                object-fit: contain; 
+            }
+        }
+
+        &__phone {
+
+            video {
+                @include size (100%, 100%);
+                object-fit: cover;
+                border-radius: 30px;
+            }
+        }
+
+    }
+
+    .return-home {
+        margin-top: 32px;
+        @include flex (flex-start, center);
+
+        a {
+            @extend %font-base;
+        }
+    }
+}
+
+
+@media screen and (max-width : 1024px){
+    .mockup-project {
+        padding: 150px 20px;
+    }
+}
+
+@media screen and (max-width : 750px){
+    .mockup-project {
+        &__grid {
+            gap : 16px;
+
+
+        }
+    }
+}
+
+@media screen and (max-width :600px ){
+    .mockup-project {
+        &__grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap : 16px;
+
+            &__website {
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+        }
+    }
+}
+
+
+.footer-project {
+    background-color: $white;
+    position: relative;
+    z-index: 10;
+}
