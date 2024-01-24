@@ -21,7 +21,8 @@
         @include size (100%, 100%);
 
         &__content {
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(5px);
+            border-radius: 30px;
             padding: 32px;
             @include flex (center, center, column);
             gap : 32px;

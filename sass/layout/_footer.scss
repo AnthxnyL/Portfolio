@@ -3,13 +3,38 @@
     background-color: $white;
     @include size (100%, 530px);
     @include flex (center, center);
+    overflow: hidden;
 
     &__flex {
+        position: relative;
         @include flex (center, flex-start, column);
         gap : 32px;
         @include size (100%, 100%);
 
+        .blur-footer {
+            position: absolute;
+            z-index: 0;
+            background: radial-gradient(43.79% 43.79% at 50% 50%, rgba(85, 156, 207, 0.7) 10%, rgba(85, 156, 207, 0) 100%);
+            border-radius: 50%;
+            
+            &__1{
+                @include size (700px, 700px);
+                top : -400px;
+                right: -200px;
+
+            }
+
+            &__2 {
+                @include size (500px, 500px);
+                bottom : -200px;
+                left: -200px;
+            }
+
+
+        }
+
         &__links {
+            z-index: 1;
             @include flex(center, flex-start, column);
             gap : 32px;
 
@@ -42,11 +67,13 @@
         }
 
         hr {
+            z-index: 1;
             width: 100%;
             border: 1px solid $black;
         }
 
         &__copyright {
+            z-index: 1;
             align-self: flex-end;
            font-size: 16px;
            font-weight: 400;
@@ -68,5 +95,27 @@
 @media screen and (max-width : 800px){
     .footer {
         padding : 145px 20px 28px 20px;
+    }
+}
+
+@media screen and (max-width : 450px) {
+
+    .footer{
+        &__flex{
+
+            .blur-footer {
+                &__1 {
+                    @include size (500px, 500px);
+                    top : -250px;
+                    right: -300px;
+                }
+        
+                &__2 {
+                    @include size (300px, 300px);
+                    bottom : -100px;
+                    left: -200px;
+                }
+            }
+        }
     }
 }
