@@ -410,6 +410,7 @@ html {
            
             &__image {
                 @include size (100%, 490px);
+                background: center center no-repeat url('./img/mockup-clem/minia-mockup-clem.png');
             }
         }
 
@@ -424,6 +425,7 @@ html {
 
             &__image {
                 @include size(100%,770px);
+                background : center center no-repeat url('./img/mockup-oakland/minia-mockup-oakland.png');
             }
 
             &__capsules {

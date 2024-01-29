@@ -716,6 +716,7 @@ html {
 .projects__grid .project1__image {
   width: 100%;
   height: 490px;
+  background: center center no-repeat url("./img/mockup-clem/minia-mockup-clem.png");
 }
 .projects__grid .project2 {
   margin-top: 250px;
@@ -732,6 +733,7 @@ html {
 .projects__grid .project2__image {
   width: 100%;
   height: 770px;
+  background: center center no-repeat url("./img/mockup-oakland/minia-mockup-oakland.png");
 }
 .projects__grid .project2__capsules {
   align-self: flex-end;
