@@ -1332,7 +1332,7 @@ html {
     height: auto;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .description-project__flex__arrow {
     display: none;
   }
