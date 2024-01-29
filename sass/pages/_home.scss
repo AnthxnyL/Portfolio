@@ -119,6 +119,11 @@ html {
             @include size (500px, 500px);
         }
 
+        svg.trail {
+            display: none;
+        }
+
+
     }
 
     .home {

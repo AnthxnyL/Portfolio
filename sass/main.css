@@ -475,6 +475,9 @@ html {
     width: 500px;
     height: 500px;
   }
+  .header-home-container svg.trail {
+    display: none;
+  }
   .home {
     padding: 150px 20px;
   }
