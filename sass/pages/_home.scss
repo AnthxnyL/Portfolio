@@ -309,7 +309,6 @@ html {
            
             &__image {
                 position: relative;
-                background-color: grey;
                 border-radius: 30px;
                 @include flex (center, center);
 
@@ -441,6 +440,7 @@ html {
 
             &__image {
                 @include size (100%, 720px);
+                background-color: grey;
             }
         }
 
@@ -460,6 +460,7 @@ html {
 
             &__image {
                 @include size(100%,530px);
+                background-color: grey;
             }
 
             &__capsules {
