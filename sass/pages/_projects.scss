@@ -9,6 +9,27 @@
   
 }
 
+.image-call {
+    background: center top/ cover no-repeat url('../img/mockup-call/phone-bc.jpg');
+}
+
+.header-white {
+    color : white;
+
+    &__line {
+        background-color: white !important;
+    }
+
+    
+
+    &__nav {
+        a {
+            color : white;
+        }
+    }
+}
+
+
 .image-project {
     z-index : 0;
     position: fixed;
@@ -34,6 +55,12 @@
                 img {
                     @include size (100%, auto);
                    object-fit: contain;
+                }
+
+                span {
+                    @extend %font-bold;
+                    font-size: 56px;
+                    color : #1181fc;
                 }
             }
 
@@ -266,6 +293,13 @@
 
         .coucou-clem__background {
             background-color: #EF8426;
+        }
+
+        .background-call {
+           img {
+                @include size (100%, 100%);
+                object-fit: cover;
+           }
         }
 
         &__website {

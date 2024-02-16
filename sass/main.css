@@ -85,7 +85,7 @@ body {
   line-height: 71.5px;
 }
 
-.description-project__flex__content a, .description-project__flex__content__tools h3, .description-project__flex__content__desc h3, .tools__container__grid .tools-case h4 {
+.description-project__flex__content a, .description-project__flex__content__tools h3, .description-project__flex__content__desc h3, .image-project__flex__content__logo span, .tools__container__grid .tools-case h4 {
   font-weight: 500;
   font-size: 26px;
   font-family: "Barlow", sans-serif;
@@ -750,7 +750,18 @@ html {
 .projects__grid .project3__image {
   width: 100%;
   height: 720px;
-  background-color: grey;
+  background: center center/cover no-repeat url("../img/mockup-call/minia-call.png");
+}
+.projects__grid .project3__image .img {
+  width: 100%;
+  height: 100%;
+  background-color: #4997F9;
+  border-radius: 30px;
+}
+.projects__grid .project3__image .img video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .projects__grid .project4 {
   display: flex;
@@ -1127,6 +1138,20 @@ html {
   background: center/cover no-repeat url("../img/mockup-clem/jeunes.jpg");
 }
 
+.image-call {
+  background: center top/cover no-repeat url("../img/mockup-call/phone-bc.jpg");
+}
+
+.header-white {
+  color: white;
+}
+.header-white__line {
+  background-color: white !important;
+}
+.header-white__nav a {
+  color: white;
+}
+
 .image-project {
   z-index: 0;
   position: fixed;
@@ -1168,6 +1193,10 @@ html {
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+.image-project__flex__content__logo span {
+  font-size: 56px;
+  color: #1181fc;
 }
 .image-project__flex__content__capsules {
   display: flex;
@@ -1372,6 +1401,11 @@ html {
 }
 .mockup-project__grid .coucou-clem__background {
   background-color: #EF8426;
+}
+.mockup-project__grid .background-call img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .mockup-project__grid__website {
   grid-column: 1/3;
