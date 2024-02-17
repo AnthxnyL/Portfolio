@@ -750,13 +750,12 @@ html {
 .projects__grid .project3__image {
   width: 100%;
   height: 720px;
-  background: center center/cover no-repeat url("../img/mockup-call/minia-call.png");
 }
 .projects__grid .project3__image .img {
   width: 100%;
   height: 100%;
-  background-color: #4997F9;
   border-radius: 30px;
+  background-color: #4997f9;
 }
 .projects__grid .project3__image .img video {
   width: 100%;
@@ -869,6 +868,12 @@ html {
   }
   .projects__grid {
     gap: 120px;
+  }
+  .projects__grid .project3__image .img {
+    background: center center/cover no-repeat url("../img/mockup-call/minia-call.png");
+  }
+  .projects__grid .project3__image .img video {
+    display: none;
   }
   .projects__grid__project__description {
     max-width: 100%;
